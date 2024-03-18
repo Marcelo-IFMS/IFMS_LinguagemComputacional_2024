@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,19 +7,22 @@
     <script type="text/javascript" src="js/primeiroCod.js"></script>
     <script type="text/javascript" src="js/calculos.js"></script>
 </head>
-
 <body>
-    <h1>Script</h1>
+    <h1>Modularização de Scripts</h1>
     <input type="number" id="num">
-    <input type="button" onclick="compare(document.getElementById('num').value);" value="Alerta">
-    <!-- calculos -->
-    <input type="number">
-    <input type="number">
-    <input type="button" value="Calculos" onclick="calculo(2,3);">
-    <p id="numero"></p>
+    <input type="button" value="compare" onclick="compare(document.getElementById('num').value);">
+    <br />
+    <input type="number" id="num1">
+    <br />
+    <input type="number" id="num2">
+    <br />
+    <input type="button" value="compare"
+     onclick="document.getElementById('calculo').innerHTML = 
+     calculo(document.getElementById('num1').value,document.getElementById('num2').value)">
+    <p id="calculo"></p>
 </body>
+<script type="text/javascript">
+    document.getElementById('calculo').innerHTML = 'Olá';
+</script>
 
 </html>
-<script type="text/javascript">
-    document.getElementById('numero').innerHTML = "Olá";
-</script>

@@ -1,11 +1,16 @@
 function calculo(x,y){
-    Soma = x+y;
-    console.log("a soma de "+x+" + "+y+" é igual a "+Soma);
-    divisao = x/y;
-    console.log("a Divisão de "+x+" / "+y+" é igual a "+divisao);
-    subtracao = x-y;
-    console.log("a Subtração de "+x+" - "+y+" é igual a "+subtracao);
-    multiplicacao = x*y;
-    console.log("a Multiplicação de "+x+" * "+y+" é igual a "+multiplicacao);
+    if (x==='' || y===''){
+        alert('Informe números nos dois campos');
+        return false;
+    }
+    soma=parseInt(x)+parseInt(y);
+    CalculoString = ("A Soma é igual a "+soma+"<br />");
+    subtrcao=x-y;
+    CalculoString += ("A subtração é igual a "+subtrcao+"<br />");
+    divisao=x/y;
+    CalculoString += ("A divisão é igual a "+divisao+"<br />");
+    multiplicacao=x*y;
+    CalculoString += ("A multiplicação é igual a "+multiplicacao);
+    return CalculoString
 }
-calculo(2,3);
+// calculo(2,3);
