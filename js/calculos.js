@@ -1,16 +1,21 @@
-function calculo(x,y){
-    if (x==='' || y===''){
-        alert('Informe números nos dois campos');
-        return false;
+function calculo(x, y) {
+    if (x === '' || y === '') {
+        return ("Preencha os dois Campos");
     }
-    soma=parseInt(x)+parseInt(y);
-    CalculoString = ("A Soma é igual a "+soma+"<br />");
-    subtrcao=x-y;
-    CalculoString += ("A subtração é igual a "+subtrcao+"<br />");
-    divisao=x/y;
-    CalculoString += ("A divisão é igual a "+divisao+"<br />");
-    multiplicacao=x*y;
-    CalculoString += ("A multiplicação é igual a "+multiplicacao);
-    return CalculoString
+    soma = parseInt(x) + parseInt(y);
+    CalcString = ("A Soma é igual a " + soma + '<br />');
+    subtrcao = x - y;
+    CalcString += ("A subtração é igual a " + subtrcao + '<br />');
+    divisao = x / y;
+    CalcString += ("A divisão é igual a " + divisao + '<br />');
+    multiplicacao = x * y;
+    CalcString += ("A multiplicação é igual a " + multiplicacao);
+    return CalcString;
 }
-// calculo(2,3);
+function maior(x, y) {
+    if (x < y) {
+        return false;
+    } else {
+        return true;
+    }
+}
