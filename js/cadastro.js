@@ -5,7 +5,7 @@ function cad(nome, telefone) {
         { nome: nome,
           telefone: telefone 
     });
-    escreveCadastro();
+    escreveCadastro();//chama a função que escreve no console
 }
 //escreve no console
 function escreveCadastro() {
