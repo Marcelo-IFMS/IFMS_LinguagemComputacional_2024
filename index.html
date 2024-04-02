@@ -48,6 +48,19 @@
                 crossorigin="anonymous"></script>
         </div>
     </div>
+    <div class="my-3  container border bg-subtle rounded" id="cadastro">
+        <label for="staticEmail" class="col-sm-4 col-form-label">Informe um Nome:</label>
+        <div class="col-sm-10">
+            <input type="text" id="nome">
+        </div>
+        <label for="staticEmail" class="col-sm-4 col-form-label">Informe um Telefone:</label>
+        <div class="col-sm-10">
+            <input type="number" id="telefone">
+        </div>
+        <div class="col-sm-10 p-2">
+            <input type="button" class="btn btn-outline-success" value="Cadastrar" onclick="cad(document.getElementById('nome').value,document.getElementById('telefone').value)">
+        </div>
+    </div>
 </body>
 <script type="text/javascript">
     document.getElementById('calculo').innerHTML = 'Olá';
