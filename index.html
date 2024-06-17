@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript</title>
-    <script type="text/javascript" src="js/primeiroCod.js"></script>
+    <script type="text/javascript" src="./js/primeiroCod.js"></script>
     <script type="text/javascript" src="js/calculos.js"></script>
     <script type="text/javascript" src="js/cadastro.js"></script>
 
@@ -14,10 +14,7 @@
 </head>
 
 <body>
-    <div
-        class="p-3 my-3 text-center container-sm text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">
-        Modularização de Scripts</div>
-    <!-- bloco para comparar números -->
+    
     <div
         class="p-3 my-3 text-center container-sm text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">
         Modularização de Scripts</div>
@@ -66,11 +63,11 @@
         </div>
         <div class="col-sm-10 p-2">
             <input type="button" class="btn btn-outline-success" value="Mostrar Cadastros" onclick="escreveHTML();">
+            <input type="button" class="btn btn-outline-success" value="Limpar Tela" onclick="limparTela();">
         </div>
-        <div class="col-sm-10 p-2">
-            <input type="button" class="btn btn-outline-success" value="Limpar Cadastros" onclick="limpaCadastros();">
-        </div>
-        <div id="mostrarCadastro"></div>
+        
+        
+        <div id="mostrarCadastro">   </div>
     </div>
 
 </body>

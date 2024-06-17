@@ -20,6 +20,10 @@ function escreveHTML(){
     }
     document.getElementById('mostrarCadastro').innerHTML = x;
 }
-function limpaCadastros(){
-    document.getElementById('mostrarCadastro').innerHTML = " ";
+function limparTela(){
+    document.getElementById('mostrarCadastro').innerHTML = "";
 }
+
+// function limpaCadastros(){
+//     document.getElementById('mostrarCadastro').innerHTML = " ";
+// }
