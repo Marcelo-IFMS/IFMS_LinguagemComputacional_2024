@@ -13,5 +13,13 @@ function escreveCadastro() {
 }
 
 function escreveHTML(){
-    document.getElementById('mostrarCadastro').innerHTML = cadastro[0].nome+" - "+cadastro[0].telefone; //[0].nome //constructor.name
+    var x = "";
+    // console.log(cadastro.length);
+    for (i=0 ; i< cadastro.length ;i++){
+        x += cadastro[i].nome+" - "+cadastro[i].telefone+"<br />"; //[0].nome //constructor.name
+    }
+    document.getElementById('mostrarCadastro').innerHTML = x;
+}
+function limpaCadastros(){
+    document.getElementById('mostrarCadastro').innerHTML = " ";
 }
