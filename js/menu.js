@@ -45,6 +45,20 @@ function menu(menu) {
 
 
 /*
+
+  <nav class="navbar navbar-expand-sm navbar-light">
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" onclick="menu('home')" href="#">Home</a>
+                    <a class="nav-link" onclick="menu('compare')" href="#">Compare</a>
+                    <a class="nav-link" onclick="menu('calculos')" href="#">Cálculos</a>
+                    <a class="nav-link" onclick="menu('cadastro')" href="#">Cadastro</a>
+                    <a class="nav-link" onclick="menu('cpf')" href="#">CPF</a>
+                </div>
+            </div>
+        </nav>
+
+        
  style="display: none;"
     <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
