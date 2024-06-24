@@ -21,4 +21,4 @@ function tamanhoUF(cpf) {
         }
     }
 }
-tamanhoUF('11111111311');
+

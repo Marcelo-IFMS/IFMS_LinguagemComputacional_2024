@@ -9,17 +9,29 @@
     <script type="text/javascript" src="./js/primeiroCod.js"></script>
     <script type="text/javascript" src="js/calculos.js"></script>
     <script type="text/javascript" src="js/cadastro.js"></script>
-    <script type="text/javascript" src="js/tamanhoString.js"></script>
-
+    <script type="text/javascript" src="js/tamanhoUF.js"></script>
+    <script type="text/javascript" src="js/menu.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
-
 <body>
-    
     <div
         class="p-3 my-3 text-center container-sm text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">
-      <%Titulo%>></div>
+        <nav class="navbar navbar-expand-sm navbar-light">
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" onclick="menu('home')" href="#">Home</a>
+                    <a class="nav-link" onclick="menu('compare')" href="#">Compare</a>
+                    <a class="nav-link" onclick="menu('calculos')" href="#">Cálculos</a>
+                    <a class="nav-link" onclick="menu('cadastro')" href="#">Cadastro</a>
+                    <a class="nav-link" onclick="menu('cpf')" href="#">CPF</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="container border bg-subtle rounded my-3" id="home">
+        <p class="text-center h4">Bem vindo aos Módulos</p>
+    </div>
     <!-- bloco para comparar números -->
     <div class="container border bg-subtle rounded" id="compare">
         <div class="mb-3 row">
@@ -32,7 +44,7 @@
             onclick="compare(document.getElementById('num').value);">
     </div>
     <!-- Bloco efetua cálculos -->
-    <div class="my-3  container border bg-subtle rounded" id="calculos">
+    <div class="container border bg-subtle rounded my-3" id="calculos">
         <div class="mb-3 row">
             <label for="staticEmail" class="col-sm-4 col-form-label">Informe o primeiro número:</label>
             <div class="col-sm-10">
@@ -51,7 +63,7 @@
                 crossorigin="anonymous"></script>
         </div>
     </div>
-    <div class="my-3  container border bg-subtle rounded" id="cadastro">
+    <div class="container border bg-subtle rounded my-3" id="cadastro">
         <label for="staticEmail" class="col-sm-4 col-form-label">Informe um Nome:</label>
         <div class="col-sm-10">
             <input type="text" id="nome">
@@ -61,18 +73,25 @@
             <input type="number" id="telefone">
         </div>
         <div class="col-sm-10 p-2">
-            <input type="button" class="btn btn-outline-success" value="Cadastrar" onclick="cad(document.getElementById('nome').value,document.getElementById('telefone').value)">
+            <input type="button" class="btn btn-outline-success" value="Cadastrar"
+                onclick="cad(document.getElementById('nome').value,document.getElementById('telefone').value)">
         </div>
         <div class="col-sm-10 p-2">
             <input type="button" class="btn btn-outline-success" value="Mostrar Cadastros" onclick="escreveHTML();">
             <input type="button" class="btn btn-outline-success" value="Limpar Tela" onclick="limparTela();">
             <input type="button" class="btn btn-outline-success" value="Tamanho CPF" onclick="alert(sizelenth('ola'));">
         </div>
-        
-        
-        <div id="mostrarCadastro">   </div>
-    </div>
 
+
+        <div id="mostrarCadastro"> </div>
+    </div>
+    <div class="container border bg-subtle rounded my-3" id="cpf">
+        <label for="staticEmail" class="col-sm-4 col-form-label">Informe um CPF:</label>
+        <div class="col-sm-10">
+            <input type="text" id="nome">
+        </div>
+    </div>
+    <div class="container" id="teste"></div>
 </body>
 
 
