@@ -1,24 +1,21 @@
 /* verifica o tamanho do CPF e estado emissor*/
 function tamanhoUF(cpf) {
     if (cpf.length != 11) { //verifica se a variavél CPF contém 11 dígitos
-        console.log("cpf Errado"); //imprime que o cpf não contém 11 dígitos
+        document.getElementById('cpfresultado').innerHTML = ("cpf Errado"); //imprime que o cpf não contém 11 dígitos
     } else if (cpf.length == 11) { // verifica se a variavél CPF tem 11 dígitos
         var dig = parseInt(cpf.substring(8, 9));
-        console.log(dig);
         switch (dig) { //case para cada condição da posição 9 da variável cpf que determina os estados correspondentes.
-            case 0: console.log(" CPF proveniente dos estados: Rio Grande do Sul"); break;
-            case 1: console.log(" CPF proveniente dos estados:Distrito Federal, Goiás, Mato Grosso, Mato Grosso do Sul e Tocantins"); break;
-            case 2: console.log("CPF proveniente dos estados: Pará, Amazonas, Acre, Amapá, Rondônia e Roraima"); break;
-            case 3: console.log(" CPF proveniente dos estados: Ceará, Maranhão e Piauí"); break;
-            case 4: console.log(" CPF proveniente dos estados: Pernambuco, Rio Grande do Norte, Paraíba e Alagoas"); break;
-            case 5: console.log(" CPF proveniente dos estados: Bahia e Sergipe"); break;
-            case 6: console.log(" CPF proveniente dos estados: Minas Gerais"); break;
-            case 7: console.log(" CPF proveniente dos estados: Rio de Janeiro e Espírito Santo"); break;
-            case 8: console.log(" CPF proveniente dos estados: São Paulo"); break;
-            case 9: console.log(" CPF proveniente dos estados: Paraná e Santa Catarina"); break;
+            case 0: document.getElementById('cpfresultado').innerHTML = ("CPF proveniente dos estados:<br /> <b>Rio Grande do Sul</b>"); break;
+            case 1: document.getElementById('cpfresultado').innerHTML = ("CPF proveniente dos estados:<br /> <b>Distrito Federal, Goiás, Mato Grosso, Mato Grosso do Sul e Tocantins</b>"); break;
+            case 2: document.getElementById('cpfresultado').innerHTML = ("CPF proveniente dos estados:<br /> <b>Pará, Amazonas, Acre, Amapá, Rondônia e Roraima</b>"); break;
+            case 3: document.getElementById('cpfresultado').innerHTML = ("CPF proveniente dos estados:<br /> <b>Ceará, Maranhão e Piauí</b>"); break;
+            case 4: document.getElementById('cpfresultado').innerHTML = ("CPF proveniente dos estados:<br /> <b>Pernambuco, Rio Grande do Norte, Paraíba e Alagoas</b>"); break;
+            case 5: document.getElementById('cpfresultado').innerHTML = ("CPF proveniente dos estados:<br /> <b>Bahia e Sergipe</b>"); break;
+            case 6: document.getElementById('cpfresultado').innerHTML = ("CPF proveniente dos estados:<br /> <b>Minas Gerais</b>"); break;
+            case 7: document.getElementById('cpfresultado').innerHTML = ("CPF proveniente dos estados:<br /> <b>Rio de Janeiro e Espírito Santo</b>"); break;
+            case 8: document.getElementById('cpfresultado').innerHTML = ("CPF proveniente dos estados:<br /> <b>São Paulo</b>"); break;
+            case 9: document.getElementById('cpfresultado').innerHTML = ("CPF proveniente dos estados:<br /> <b>Paraná e Santa Catarina</b>"); break;
         }
     }
 }
-
-tamanhoUF('01234567990');
 
