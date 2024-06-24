@@ -1,4 +1,37 @@
-function menu(menu) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* function menu(menu) {
     switch (menu) { //verifica o menu e esconde os desnecessários
         case 'home':
             document.getElementById("compare").style.display = "none";
@@ -32,7 +65,7 @@ function menu(menu) {
             break;
 
     }
-}
+} */
 
 
 
