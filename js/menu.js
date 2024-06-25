@@ -18,9 +18,13 @@ function aparececadastro() {
 }
 function aparececpf() {
     document.getElementById('compare').style.display = 'none'
-    document.getElementById('calculos').style.display = 'block'
-    document.getElementById('cadastro').style.display = 'block'
+    document.getElementById('calculos').style.display = 'none'
+    document.getElementById('cadastro').style.display = 'none'
     document.getElementById('cpf').style.display = 'block'
+}
+
+function menu2(menu){
+    $('#conteudo').load("modulos/"+menu+".html");
 }
 
 

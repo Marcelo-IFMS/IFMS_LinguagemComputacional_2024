@@ -1,5 +1,8 @@
 var cadastro = [];
 //função que adicinoa elementos em um array
+
+// comentário
+/* comentário*/
 function cad(nome, telefone) {
     cadastro.push(
         { nome: nome,

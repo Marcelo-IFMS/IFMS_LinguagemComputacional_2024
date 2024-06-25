@@ -5,114 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modularizando com javascript</title>
-    <script type="text/javascript" src="./js/primeiroCod.js"></script>
-    <!-- Primeiro código escrito que verifica um número em comparação a 5 -->
-    <script type="text/javascript" src="js/calculos.js"></script>
-    <!-- Chama o script para calcular +-0* de dois números -->
-    <script type="text/javascript" src="js/cadastro.js"></script>
-    <!-- Chama o script para cadastro de nome e telefone -->
-    <script type="text/javascript" src="js/tamanhoUF.js"></script>
-    <!-- Chama o script para verificar o CPF - Tamanho e UF -->
-     <script type="text/javascript" src="js/menu.js"></script>
 
+    <!-- Primeiro código escrito que verifica um número em comparação a 5 -->
+    <script type="text/javascript" src="./js/primeiroCod.js"></script>
+    <!-- Chama o script para calcular +-0* de dois números -->
+    <script type="text/javascript" src="js/calculos.js"></script>
+    <!-- Chama o script para cadastro de nome e telefone -->
+    <script type="text/javascript" src="js/cadastro.js"></script>
+    <!-- Chama o script para verificar o CPF - Tamanho e UF -->
+    <script type="text/javascript" src="js/tamanhoUF.js"></script>
+    <!-- carrega o javascript do menu -->
+    <script type="text/javascript" src="js/menu.js"></script>
     <!-- chamada do Bootstrap em CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-   
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 
 <body>
     <!-- Div de menu -->
     <div class="p-3 my-3 text-center container-sm text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3"
         id="menu">
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="/">Página Inicial</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" onclick="aparececompare()">Compare</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" onclick="aparececalculo()">Calculo</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" onclick="aparececadastro()">Cadastro</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" onclick="aparececpf()">CPF</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
+<!-- teste -->
     </div>
-    <!-- bloco para comparar números -->
-    <div class="container border bg-subtle rounded" id="compare" style="display: none;">
-        <div class="mb-3 row">
-            <label for="staticEmail" class="col-sm-4 col-form-label">Informe um Número</label>
-            <div class="col-sm-10">
-                <input type="number" id="num">
-            </div>
-        </div>
-        <input type="button" class="btn btn-primary btn-outline-dark" value="compare"
-            onclick="compare(document.getElementById('num').value);">
+    <!-- conteúdo -->
+    <div class="container border bg-subtle rounded" id="conteudo">
+        <p class="text-center">Bem vindo aos Módulos</p>
     </div>
-    <!-- Bloco efetua cálculos -->
-    <div class="container border bg-subtle rounded my-3" id="calculos" style="display: none;">
-        <div class="mb-3 row">
-            <label for="staticEmail" class="col-sm-4 col-form-label">Informe o primeiro número:</label>
-            <div class="col-sm-10">
-                <input type="number" id="num1">
-            </div>
-            <label for="staticEmail" class="col-sm-4 col-form-label">Informe o segundo número:</label>
-            <div class="col-sm-10"> <input type="number" id="num2">
-                <input type="button" class="btn btn-outline-success" value="calculos"
-                    onclick="document.getElementById('calculo').innerHTML = calculo(document.getElementById('num1').value,document.getElementById('num2').value)">
-            </div>
-            <p id="calculo">
-
-            </p>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-                integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-                crossorigin="anonymous"></script>
-        </div>
-    </div>
-    <!-- bloco para cadastrar -->
-    <div class="container border bg-subtle rounded my-3" id="cadastro" style="display: none;">
-        <label for="staticEmail" class="col-sm-4 col-form-label">Informe um Nome:</label>
-        <div class="col-sm-10">
-            <input type="text" id="nome">
-        </div>
-        <label for="staticEmail" class="col-sm-4 col-form-label">Informe um Telefone:</label>
-        <div class="col-sm-10">
-            <input type="number" id="telefone">
-        </div>
-        <div class="col-sm-10 p-2">
-            <input type="button" class="btn btn-outline-success" value="Cadastrar"
-                onclick="cad(document.getElementById('nome').value,document.getElementById('telefone').value)">
-        </div>
-        <div class="col-sm-10 p-2">
-            <input type="button" class="btn btn-outline-success" value="Mostrar Cadastros" onclick="escreveHTML();">
-            <input type="button" class="btn btn-outline-success" value="Limpar Tela" onclick="limparTela();">
-        </div>
-        <div id="mostrarCadastro"> </div>
-    </div>
-    <!-- bloco para validar CPF -->
-    <div class="container border bg-subtle rounded my-3" id="cpf" style="display: none;">
-        <label for="staticCPF" class="col-sm-4 col-form-label">Informe um CPF:</label>
-        <div class="col-sm-10">
-            <input type="number" id="cpfnumero">
-            <input type="button" class="btn btn-outline-success" value="Verificar CPF"
-                onclick="tamanhoUF(document.getElementById('cpfnumero').value);">
-            <p id="cpfresultado"></p>
-        </div>
-    </div>
+    <script type="text/javascript">
+        $("#menu").load("modulos/menu.html") ;
+    </script>
 </body>
 
 </html>
