@@ -1,4 +1,15 @@
-
+function aparececompare() {
+    document.getElementById('compare').style.display = 'block'
+    document.getElementById('calculos').style.display = 'block'
+    document.getElementById('cadastro').style.display = 'block'
+    document.getElementById('cpf').style.display = 'block'
+}
+function aparececalculo() {
+    document.getElementById('compare').style.display = 'none'
+    document.getElementById('calculos').style.display = 'block'
+    document.getElementById('cadastro').style.display = 'none'
+    document.getElementById('cpf').style.display = 'none'
+}
 
 
 
@@ -78,6 +89,7 @@
 
 
 /*
+<!-- <script type="text/javascript" src="js/menu.js"></script> -->
 
   <nav class="navbar navbar-expand-sm navbar-light">
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
