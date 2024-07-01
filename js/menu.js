@@ -24,11 +24,10 @@ function aparececpf() {
 }
 
 function menu2(menu){
+    // alert(menu);
     $('#conteudo').load("modulos/"+menu+".html");
+    // document.getElementById("'"+menu+"'").style.display = 'block';
 }
-
-
-
 
 
 

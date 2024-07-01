@@ -1,8 +1,17 @@
-var cadastro = [];
-//função que adicinoa elementos em um array
+/* 
+Modulo javascript que cadastra elementos em um array
+neste modulo estão disponíveis 4 funções:
 
-// comentário
-/* comentário*/
+cad(nome, telefone), recebe dois parâmetros, Nome e telefone, que são informados pelo cadastros.html, e alimente o vetor cadastro[]
+escreveCadastro(), Mostra no console o vetor com seus elementos.
+escreveHTML(){  monta um html utilizando contatenação de elementeos do vetor cadastro[] e texto html, após altera o inner html de "mostrarCadastro" no arquivo cadastros.html
+limparTela(){ faz um innerHTML vazio "" em "mostrarCadastro" no arquivo cadastros.html
+
+ */
+
+var cadastro = [];
+
+//função que adicinoa elementos em um array
 function cad(nome, telefone) {
     cadastro.push(
         { nome: nome,
@@ -14,7 +23,7 @@ function cad(nome, telefone) {
 function escreveCadastro() {
     console.log(cadastro);
 }
-
+//cria um html concatenado dos elementos do vetor cadastro[] com elementos html, alterando mostrarCadastro por meio de innerHTML
 function escreveHTML(){
     var x = "";
     // console.log(cadastro.length);
@@ -23,10 +32,8 @@ function escreveHTML(){
     }
     document.getElementById('mostrarCadastro').innerHTML = x;
 }
+
+// altera o conteúdo de mostrarCadastro na página cadastro.html com innerHTML recebendo uma string vazia ""
 function limparTela(){
     document.getElementById('mostrarCadastro').innerHTML = "";
 }
-
-// function limpaCadastros(){
-//     document.getElementById('mostrarCadastro').innerHTML = " ";
-// }
