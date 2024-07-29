@@ -1,3 +1,9 @@
+function menu(menu){
+    $('#conteudo').load("modulos/"+menu+".html");
+}
+
+
+/* 
 function aparececompare() {
     document.getElementById('compare').style.display = 'block'
     document.getElementById('calculos').style.display = 'none'
@@ -22,13 +28,7 @@ function aparececpf() {
     document.getElementById('cadastro').style.display = 'none'
     document.getElementById('cpf').style.display = 'block'
 }
-
-function menu2(menu){
-    // alert(menu);
-    $('#conteudo').load("modulos/"+menu+".html");
-    // document.getElementById("'"+menu+"'").style.display = 'block';
-}
-
+ */
 
 
 
