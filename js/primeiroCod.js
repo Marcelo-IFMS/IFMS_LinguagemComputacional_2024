@@ -1,3 +1,4 @@
+// var function = 1;
 function compare(x) {
     if (x === '') {
         alert("O campo está vazio!");
