@@ -1,39 +1,12 @@
-function menu(menu){
-    $('#conteudo').load("modulos/"+menu+".html");
+try {
+    function menu(menu) {
+        $('#conteudo').load("modulos/" + menu + ".html");
+    }
+} catch (error) {
+    console.log(`O nome do erro é: ${erro.name}\n`)
+    console.log(`A mensagem de erro é: ${erro.message}\n`)
+    console.log(`A stack do erro é: ${erro.stack}\n`)
 }
-
-
-/* 
-function aparececompare() {
-    document.getElementById('compare').style.display = 'block'
-    document.getElementById('calculos').style.display = 'none'
-    document.getElementById('cadastro').style.display = 'none'
-    document.getElementById('cpf').style.display = 'none'
-}
-function aparececalculo() {
-    document.getElementById('compare').style.display = 'none'
-    document.getElementById('calculos').style.display = 'block'
-    document.getElementById('cadastro').style.display = 'none'
-    document.getElementById('cpf').style.display = 'none'
-}
-function aparececadastro() {
-    document.getElementById('compare').style.display = 'none'
-    document.getElementById('calculos').style.display = 'none'
-    document.getElementById('cadastro').style.display = 'block'
-    document.getElementById('cpf').style.display = 'none'
-}
-function aparececpf() {
-    document.getElementById('compare').style.display = 'none'
-    document.getElementById('calculos').style.display = 'none'
-    document.getElementById('cadastro').style.display = 'none'
-    document.getElementById('cpf').style.display = 'block'
-}
- */
-
-
-
-
-
 
 
 
