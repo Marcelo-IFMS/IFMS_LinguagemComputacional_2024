@@ -1,16 +1,14 @@
+
+/* 
+Modulo javascript que cadastra elementos em um array
+neste modulo estão disponíveis 4 funções:
+ 
+cad(nome, telefone), recebe dois parâmetros, Nome e telefone, que são informados pelo cadastros.html, e alimente o vetor cadastro[]
+escreveCadastro(), Mostra no console o vetor com seus elementos.
+escreveHTML(){  monta um html utilizando contatenação de elementeos do vetor cadastro[] e texto html, após altera o inner html de "mostrarCadastro" no arquivo cadastros.html
+limparTela(){ faz um innerHTML vazio "" em "mostrarCadastro" no arquivo cadastros.html  
+ */
 try {
-
-
-    /* 
-    Modulo javascript que cadastra elementos em um array
-    neste modulo estão disponíveis 4 funções:
-    
-    cad(nome, telefone), recebe dois parâmetros, Nome e telefone, que são informados pelo cadastros.html, e alimente o vetor cadastro[]
-    escreveCadastro(), Mostra no console o vetor com seus elementos.
-    escreveHTML(){  monta um html utilizando contatenação de elementeos do vetor cadastro[] e texto html, após altera o inner html de "mostrarCadastro" no arquivo cadastros.html
-    limparTela(){ faz um innerHTML vazio "" em "mostrarCadastro" no arquivo cadastros.html
-    
-     */
 
     var cadastro = [];
 
@@ -41,7 +39,9 @@ try {
     function limparTela() {
         document.getElementById('mostrarCadastro').innerHTML = "";
     }
-} catch (error) {
+
+
+} catch (erro) {
     console.log(`O nome do erro é: ${erro.name}\n`)
     console.log(`A mensagem de erro é: ${erro.message}\n`)
     console.log(`A stack do erro é: ${erro.stack}\n`)

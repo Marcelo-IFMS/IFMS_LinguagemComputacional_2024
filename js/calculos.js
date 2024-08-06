@@ -1,5 +1,4 @@
 try {
-
     function calculo(x, y) {
         if (x === '' || y === '') {
             return ("Preencha os dois Campos");
@@ -10,7 +9,7 @@ try {
         CalcString += ("A subtração é igual a " + subtrcao + '<br />');
         divisao = x / y;
         CalcString += ("A divisão é igual a " + divisao + '<br />');
-        multiplicacao = x * y;
+        multiplicacao = x * 'y';
         CalcString += ("A multiplicação é igual a " + multiplicacao);
         return CalcString;
     }
@@ -21,7 +20,7 @@ try {
             return true;
         }
     }
-} catch (error) {
+} catch (erro) {
     console.log(`O nome do erro é: ${erro.name}\n`)
     console.log(`A mensagem de erro é: ${erro.message}\n`)
     console.log(`A stack do erro é: ${erro.stack}\n`)
