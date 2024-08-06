@@ -1,6 +1,7 @@
-try {
-    /* verifica o tamanho do CPF e estado emissor*/
-    function tamanhoUF(cpf) {
+
+/* verifica o tamanho do CPF e estado emissor*/
+function tamanhoUF(cpf) {
+    try {
         if (cpf.length != 11) { //verifica se a variavél CPF contém 11 dígitos
             document.getElementById('cpfresultado').innerHTML = ("cpf Errado"); //imprime que o cpf não contém 11 dígitos
         } else if (cpf.length == 11) { // verifica se a variavél CPF tem 11 dígitos
@@ -18,10 +19,10 @@ try {
                 case 9: document.getElementById('cpfresultado').innerHTML = ("CPF proveniente dos estados:<br /> <b>Paraná e Santa Catarina</b>"); break;
             }
         }
+    } catch (erro) {
+        console.log(`O nome do erro é: ${erro.name}\n`)
+        console.log(`A mensagem de erro é: ${erro.message}\n`)
+        console.log(`A stack do erro é: ${erro.stack}\n`)
     }
-
-} catch (erro) {
-    console.log(`O nome do erro é: ${erro.name}\n`)
-    console.log(`A mensagem de erro é: ${erro.message}\n`)
-    console.log(`A stack do erro é: ${erro.stack}\n`)
 }
+

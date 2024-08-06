@@ -1,7 +1,8 @@
-try {
 
-    // var function = 1;
-    function compare(x) {
+
+// var function = 1;
+function compare(x) {
+    try {
         if (x === '') {
             alert("O campo está vazio!");
             return false;
@@ -17,9 +18,10 @@ try {
         } else {
             alert(x + " maior que 5");
         }
+
+    } catch (error) {
+        console.log(`O nome do erro é: ${erro.name}\n`)
+        console.log(`A mensagem de erro é: ${erro.message}\n`)
+        console.log(`A stack do erro é: ${erro.stack}\n`)
     }
-} catch (error) {
-    console.log(`O nome do erro é: ${erro.name}\n`)
-    console.log(`A mensagem de erro é: ${erro.message}\n`)
-    console.log(`A stack do erro é: ${erro.stack}\n`)
 }

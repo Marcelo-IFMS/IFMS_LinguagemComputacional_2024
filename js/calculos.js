@@ -1,5 +1,6 @@
-try {
-    function calculo(x, y) {
+
+function calculo(x, y) {
+    try {
         if (x === '' || y === '') {
             return ("Preencha os dois Campos");
         }
@@ -12,16 +13,23 @@ try {
         multiplicacao = x * 'y';
         CalcString += ("A multiplicação é igual a " + multiplicacao);
         return CalcString;
+    } catch (erro) {
+        console.log(`O nome do erro é: ${erro.name}\n`)
+        console.log(`A mensagem de erro é: ${erro.message}\n`)
+        console.log(`A stack do erro é: ${erro.stack}\n`)
     }
-    function maior(x, y) {
+}
+function maior(x, y) {
+    try {
         if (x < y) {
             return false;
         } else {
             return true;
         }
+
+    } catch (erro) {
+        console.log(`O nome do erro é: ${erro.name}\n`)
+        console.log(`A mensagem de erro é: ${erro.message}\n`)
+        console.log(`A stack do erro é: ${erro.stack}\n`)
     }
-} catch (erro) {
-    console.log(`O nome do erro é: ${erro.name}\n`)
-    console.log(`A mensagem de erro é: ${erro.message}\n`)
-    console.log(`A stack do erro é: ${erro.stack}\n`)
 }

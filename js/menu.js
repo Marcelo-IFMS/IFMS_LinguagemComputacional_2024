@@ -1,11 +1,13 @@
-try {
-    function menu(menu) {
+
+function menu(menu) {
+    try {
         $('#conteudo').load("modulos/" + menu + ".html");
+
+    } catch (erro) {
+        console.log(`O nome do erro é: ${erro.name}\n`)
+        console.log(`A mensagem de erro é: ${erro.message}\n`)
+        console.log(`A stack do erro é: ${erro.stack}\n`)
     }
-} catch (erro) {
-    console.log(`O nome do erro é: ${erro.name}\n`)
-    console.log(`A mensagem de erro é: ${erro.message}\n`)
-    console.log(`A stack do erro é: ${erro.stack}\n`)
 }
 
 
