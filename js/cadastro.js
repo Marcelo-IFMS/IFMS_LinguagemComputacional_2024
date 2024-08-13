@@ -13,12 +13,13 @@ limparTela(){ faz um innerHTML vazio "" em "mostrarCadastro" no arquivo cadastro
 var cadastro = [];
 
 //função que adicinoa elementos em um array
-function cad(nome, telefone) {
+function cad(nome, telefone, ultimonome) {
     try {
         cadastro.push(
             {
                 nome: nome,
-                telefone: telefone
+                telefone: telefone,
+                ultimonome: ultimonome
             });
         escreveCadastro();//chama a função que escreve no console
     } catch (erro) {
@@ -43,7 +44,7 @@ function escreveHTML() {
         var x = "";
         // console.log(cadastro.length);
         for (i = 0; i < cadastro.length; i++) {
-            x += cadastro[i].nome + " - " + cadastro[i].telefone + "<br />"; //[0].nome //constructor.name
+            x += cadastro[i].nome + " - " + cadastro[i].telefone + "<br />"+ cadastro[i].ultimonome + "<br />"; //[0].nome //constructor.name
         }
         document.getElementById('mostrarCadastro').innerHTML = x;
     } catch (erro) {
