@@ -1,45 +1,51 @@
-const Pessoa ={
+const Pessoa = {
     nome: "Marcelo",
     nomemeio: "Tomporoski",
     nomeultimo: "Perez",
-    dtnascimento:"25/10/1980",
-    cpf:"00000000000",
-    sexo:"masculino",
+    dtnascimento: "25/10/1980",
+    cpf: "00000000000",
+    sexo: "masculino",
     nomecompleto: function () {
-       return(this.nome+" "+this.nomemeio+" "+this.nomeultimo);
+        return (this.nome + " " + this.nomemeio + " " + this.nomeultimo);
     },
-    especificar: function(){
-        return "A requisitada chama:"+this.nomecompleto()
-        +", nascido(a) em "+this.dtnascimento
-        +", possui o cpf "+this.cpf
-        +", com o sexo:" +this.sexo;
+    especificar: function () {
+        return `A requisitada chama: ${this.nomecompleto()}
+        nascido(a) em: ${this.dtnascimento}
+        possui o cpf: ${this.cpf}
+        com o sexo: ${this.sexo}`;
     }
 };
-console.log(Pessoa.especificar());
-const novapessoa = Object.create(Pessoa);
-novapessoa.nome = "Maria";
-novapessoa.nomemeio = "Manuel";
-novapessoa.nomeultimo = "Pereira";
-novapessoa.cpf = "11111111111";
-novapessoa.dtnascimento='10/01/1990';
-novapessoa.sexo="feminino";
-console.log(novapessoa.especificar());
+function objeto(nome, nomemeio, nomeultimo, dtnascimento, cpf, sexo) {
+    eval[nome+cpf.substring(0,3)] = Object.create(Pessoa);
+    novapessoa.nome = nome;
+    novapessoa.nomemeio = nomemeio;
+    novapessoa.nomeultimo = nomeultimo;
+    novapessoa.cpf = cpf;
+    novapessoa.dtnascimento = dtnascimento;
+    novapessoa.sexo = sexo;
+    return novapessoa;
+}
+
+var novapessoa = objeto('marcelo', 'tomporoski', 'perez', '25/10/1980', '12332145698', 'masculino');
+console.log(Pessoa);
+console.log(novapessoa);
+novapessoa = objeto('Carlo', 'Jose', 'Oliveira', '25/10/1980', '12332145698', 'masculino');
+console.log(novapessoa);
+
+
+/* 
+
+function objeto(formName) {
+    console.log(formName.cpf.value);
+    //  eval[nome+cpf.substr(0,3)] = Object.create(Pessoa);
+     //  eval[nome+cpf.substr(0,3)].nome = nome;
+     //  console.log(eval[nome+cpf.substr(0,3)]);  
+    
+}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-/* const pessoa = {
+const pessoa = {
     nome: "Marcelo",
     meionome: "Tomporoski",
     ultimonome: "Perez",
@@ -61,3 +67,14 @@ const ola = 'te';
 console.log(ola.length);
 console.log((pessoa.nome).length);
  */
+
+/* console.log(Pessoa.especificar());
+const novapessoa = Object.create(Pessoa);
+novapessoa.nome = "Maria";
+novapessoa.nomemeio = "Manuel";
+novapessoa.nomeultimo = "Pereira";
+novapessoa.cpf = "12345678900";
+novapessoa.dtnascimento = '10/01/1990';
+novapessoa.sexo = "feminino";
+console.log(novapessoa.especificar());
+console.log(novapessoa.cpf); */
