@@ -14,23 +14,21 @@ const Pessoa = {
         possui o cpf: ${this.cpf}
         com o sexo: ${this.sexo}`;
     }
-};
-function objeto(nome, nomemeio, nomeultimo, dtnascimento, cpf, sexo) {
-    eval[nome+cpf.substring(0,3)] = Object.create(Pessoa);
-    novapessoa.nome = nome;
-    novapessoa.nomemeio = nomemeio;
-    novapessoa.nomeultimo = nomeultimo;
-    novapessoa.cpf = cpf;
-    novapessoa.dtnascimento = dtnascimento;
-    novapessoa.sexo = sexo;
-    return novapessoa;
 }
 
-var novapessoa = objeto('marcelo', 'tomporoski', 'perez', '25/10/1980', '12332145698', 'masculino');
-console.log(Pessoa);
-console.log(novapessoa);
-novapessoa = objeto('Carlo', 'Jose', 'Oliveira', '25/10/1980', '12332145698', 'masculino');
-console.log(novapessoa);
+
+/* for(i=0;i<5;i++){
+
+    eval("variavel"+i +'='+ Object.create(Pessoa));
+  }
+console.log(variavel1);
+console.log(variavel4); */
+
+
+// console.log(Pessoa);
+// console.log(marcelo123);
+// novapessoa = objeto('Carlo', 'Jose', 'Oliveira', '25/10/1980', '12332145698', 'masculino');
+// console.log(novapessoa);
 
 
 /* 
