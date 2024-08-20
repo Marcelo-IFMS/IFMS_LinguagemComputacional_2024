@@ -15,6 +15,32 @@ const Pessoa = {
         com o sexo: ${this.sexo}`;
     }
 }
+// console.log(Pessoa.especificar());
+const novapessoa = {};
+novapessoa.nome = 'Carlos'
+ novapessoa['marcelo'] = {};
+ novapessoa['marcelo'].nome = 'Janaina';
+ novapessoa['marcelo'].desc = function () {
+    return ('o nome cadastrados é:'+this.nome);
+ };
+
+  console.log(novapessoa);
+//  console.log(novapessoa.marcelo.nome);
+//  console.log(novapessoa['marcelo'].nome);
+//  console.log(novapessoa['marcelo']);
+//  console.log(novapessoa.marcelo.desc());
+novapessoa[novapessoa.nome] = {};
+ novapessoa[novapessoa.nome].nome = "abobrinha";
+ console.log(novapessoa[novapessoa.nome].nome);
+
+ console.log(novapessoa['Carlos'].nome);
+ console.log(novapessoa.Carlos.nome);
+ 
+ 
+ 
+
+
+
 
 
 
@@ -48,4 +74,4 @@ function escevecadastro() {
     document.getElementById("pessoalista").innerHTML = lista;
 
     return false;
-} */
+}  */
