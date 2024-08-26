@@ -14,7 +14,12 @@ cadeira.praia.descricao = function(){
 }
 
 console.log(cadeira.praia.descricao());
-console.log();
+
+
+console.log(Object.values(cadeira.praia));
+console.log(Object.assign(cadeira.praia));
+console.log(Object.entries(cadeira.praia));
+console.log(Object.keys(cadeira.praia));
 
 
 
