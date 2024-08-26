@@ -37,7 +37,7 @@ novapessoa[novapessoa.nome] = {};
  console.log(novapessoa.Carlos.nome);
  
  
- 
+  
 
 
 
@@ -66,12 +66,4 @@ function cadpessoa(formParametros) {
     }
     return false;
 }
-function escevecadastro() {
-    lista = '';    
-    for (let i = 0; i < Object.keys(pessoacadastro).length; i++) {
-        lista+= pessoacadastro[Object.keys(pessoacadastro)[i]].especificar()+"<br />";
-    }
-    document.getElementById("pessoalista").innerHTML = lista;
-
-    return false;
-}  */
+/**/
